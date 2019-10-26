@@ -1,0 +1,1455 @@
+body,
+html,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+  font-family: "Microsoft YaHei", Arial;
+}
+
+.flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flexC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexA {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexS {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.radius {
+  box-shadow: 0 1px 14px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.submitBtn {
+  width: 690px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  background: @Login-Btn-Bg;
+  color: #fff;
+  border-radius: 90px;
+  font-size: 38px;
+  margin-left: 30px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.content {
+  flex: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.hold {
+  &:active {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.1);
+    }
+  }
+}
+
+//滑动条隐藏
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+
+// vant
+.van-button {
+  padding: 0;
+  border: 0;
+  line-height: normal;
+}
+
+.home {
+  .van-swipe {
+    overflow: hidden;
+    .van-swipe__indicators {
+      .van-swipe__indicator {
+        width: 10px;
+        border-radius: 16px;
+        height: 10px;
+      }
+      .van-swipe__indicator.van-swipe__indicator--active {
+        background-color: @ThemeColor !important;
+        width: 40px;
+      }
+    }
+  }
+
+  .van-notice-bar {
+    width: 540px;
+    height: 62px;
+    border-radius: 40px;
+    overflow: hidden;
+
+    .van-notice-bar__wrap {
+      .van-notice-bar__play--infinite {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  .van-tabs--line {
+    .van-tabs__wrap {
+      background: #FFF;
+
+      .van-tabs__nav--line {
+        width: 40%;
+        margin-left: 30%;
+      }
+
+      span {
+        color: #282828;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .noticePopup {
+    .notice-content {
+      .van-swipe {
+        width: 653px;
+        margin: 0;
+      }
+      .notice-text {
+        height: 620px;
+        overflow-y: scroll;
+        >p {
+          font-size: 30px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.gamesLobby,
+.activity {
+  .van-tabs__wrap {
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .van-tabs__line {
+    background-color: @ThemeColor;
+  }
+
+  .van-tab--active {
+    color: @ThemeColor;
+  }
+
+  .van-tabs .van-tab__pane {
+    min-height: calc(100vh - 225px);
+  }
+}
+
+.gamesLobby {
+  .van-tabs__content {
+    padding-top: 80px;
+  }
+  .van-tabs__wrap--scrollable .van-tab {
+    flex: 1;
+    font-size: 32px;
+  }
+
+  .van-hairline--top-bottom::after {
+    border: none;
+  }
+}
+
+.activity {
+  .header {
+    background-color: #fff;
+  }
+  table {
+    img {
+      float: left;
+      max-width: 100%;
+    }
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+
+  .van-tabs .van-tab__pane {
+    min-height: calc(100vh - 300px);
+  }
+
+  .van-tabs--line {
+    padding-top: 0;
+  }
+
+  .van-tab {
+    border: 0;
+    font-size: 32px !important;
+  }
+  .van-tab::before {
+    position: absolute !important;
+    width: 1px !important;
+    height: 10px !important;
+    top: 10px;
+    right: 0;
+    background: @BG  !important;
+    z-index: 10;
+  }
+  .van-tabs__wrap{
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .van-hairline--top-bottom::after {
+    border: 0
+  }
+  .van-tabs__line {
+    height: 4px;
+  }
+  .van-list__error-text, .van-list__finished-text, .van-list__loading-text {
+    padding-bottom: 50px;
+  }
+}
+.incomeExpenses{
+  .van-tab {
+    border: 0;
+    flex-basis: 30% !important;
+  }
+}
+.noticeWrap {
+  .van-tabs__line {
+    background: @ThemeColor;
+  }
+  .van-tabs__content {
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+  }
+  .van-tabs--line .van-tabs__wrap {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    .van-tabs__nav--line {
+      width: 40%;
+    }
+
+    .van-tab {
+      .van-ellipsis {
+        font-size: 34px;
+        line-height: 100px;
+      }
+    }
+  }
+}
+.bindMobile{
+  .van-field__button{
+    margin-right: 20px;
+  }
+}
+
+  // 额度转换
+.amount {
+  .van-number-keyboard {
+    z-index: 9999 !important;
+
+    .van-key--blue,
+    .van-key--blue.van-key--active {
+      background-color: @ThemeColor;
+      border: 0;
+    }
+
+    .van-key--blue::after {
+      border-color: @ThemeColor;
+    }
+  }
+}
+
+/*无数据*/
+.noData {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  .content_box {
+    width: 100%;
+    position: relative;
+    div {
+      p {
+        text-align: center;
+        img {
+          width: 220px;
+          height: 100%;
+          display: inline-block;
+        }
+      }
+      h4 {
+        white-space: normal;
+        color: #666;
+        font-size: 30px;
+        line-height: 80px;
+        font-weight: bold;
+        text-align: center;
+      }
+      p {
+        font-size: 28px;
+        color: #bebebe;
+      }
+    }
+  }
+}
+
+///
+.user_phone {
+  li {
+    &:nth-child(2) {
+      .van-field__clear {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+///
+.boundBankCard {
+  .userPhone {
+    .van-field__clear {
+      margin-right: 15px;
+    }
+  }
+}
+
+///
+.bindMobile {
+  .van-field__clear {
+    margin-right: 15px;
+  }
+}
+
+// 明细
+.incomeExpenses .van-tabs--line .van-tabs__wrap{display: none}
+
+// 账单
+.bill,
+.record,.teamBetRecord,.teamContacts {
+  .van-hairline--top-bottom::after {
+    border: 0;
+  }
+  .van-tabs {
+    .van-tabs__wrap {
+      .borderBtm();
+
+      .van-tabs__nav {
+        .van-tabs__line {
+          background-color: @ThemeColor  !important;
+        }
+
+        .van-tab--active {
+          span {
+            color: @ThemeColor;
+          }
+        }
+
+        &.van-tabs__nav--line {
+          padding-bottom: 17px;
+        }
+      }
+    }
+  }
+  .van-tabs .van-tab__pane {
+    min-height: calc(100vh - 210px);
+  }
+  .m-popover {
+    .m-popover-container {
+      .m-calendar {
+        .m-toolbar {
+          background-color: #fff;
+        }
+
+        .m-week-header {
+          background-color: #fff;
+          font-size: 28px;
+          color: @Bill-Font-Color-Pale;
+        }
+
+        .m-months-container {
+          .m-months-wrapper {
+            .m-months {
+              .m-row {
+                &::before {
+                  height: 0;
+                }
+              }
+
+              .m-day {
+                .m-today {
+                  background: @Amount-Out-Btn;
+                  color: #fff;
+                }
+
+                .m-day-num {
+                  width: 60px;
+                  height: 60px;
+                  line-height: 60px;
+                  border-radius: 50%;
+                }
+
+                .m-during {
+                  background: @Amount-In-Btn;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.paying {
+  .van-number-keyboard {
+    .van-key--blue,
+    .van-key--blue.van-key--active {
+      background-color: @ThemeColor;
+      border: 0;
+    }
+    .van-key--blue::after {
+      border-color: @ThemeColor;
+    }
+  }
+  .tip {
+    i {
+      font-size: 28px;
+    }
+  }
+  //.van-cell {
+  //  .van-field__body{
+  //    .van-icon {
+  //      padding-right: 0;
+  //    }
+  //  }
+  //}
+}
+
+.download {
+  .van-swipe {
+    .van-swipe__indicators {
+      .van-swipe__indicator--active {
+        background-color: @ThemeColor;
+      }
+    }
+  }
+}
+// 充值
+.wallet {
+  .online,
+  .human {
+    .van-cell {
+      align-items: center;
+      height: 130px;
+      font-size: 30px;
+
+      .van-cell__value {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        flex: 0 0 auto;
+        position: absolute;
+        left: 20px;
+
+        img {
+          width: 90%;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .van-cell__title {
+        margin-left: 90px;
+      }
+    }
+  }
+
+  .human {
+    >h1 {
+      color: #aeaeae;
+      margin: 25px 0;
+    }
+  }
+  .van-tabs {
+    .van-tabs__content {
+      min-height: calc(100vh - 360px);
+      margin-bottom: 60px;
+    }
+    .van-tabs__wrap {
+      height: 100px;
+      &:after {
+        content: none;
+      }
+    }
+    .van-tab {
+      height: 100px;
+      line-height: 100px;
+      font-size: 32px;
+      color: @Bill-Font-Color;
+      &.van-tab--active {
+        color: @ThemeColor;
+      }
+    }
+    .van-tabs__line {
+      background-color: @ThemeColor;
+      bottom: 42px;
+    }
+  }
+}
+
+.tips {
+  font-size: 28px;
+  padding: 30px 15px;
+  color: #666;
+}
+
+// 提现
+.withdraw {
+  .moneyKey {
+
+    .van-key--blue,
+    .van-key--blue.van-key--active {
+      background-color: @ThemeColor;
+      border: 0;
+    }
+
+    .van-key--blue::after {
+      border-color: @ThemeColor;
+    }
+  }
+}
+
+// 帮助中心
+.help {
+  .van-collapse {
+    .van-collapse-item {
+      .van-collapse-item__content {
+        padding: 0;
+
+        .van-cell {
+          background-color: #f7f7f7;
+        }
+
+        .van-cell__title {
+          color: @Forget-Pwd-Color;
+        }
+      }
+    }
+  }
+}
+
+// 动画
+.fadeUp-enter-active,
+.fadeUp-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fadeUp-enter,
+.fadeUp-leave-to {
+  opacity: 0;
+}
+
+// 输赢
+.profit {
+  color: @Profit !important;
+}
+
+.loss {
+  color: @Loss !important;
+}
+
+//
+.onBtn {
+  background: @Amount-Right-Btn;
+  color: #fff !important;
+
+  span {
+    color: #fff !important;
+  }
+
+  p {
+    color: #fff !important;
+  }
+}
+
+.ball {
+  background: @Amount-Right-Btn  !important;
+  color: #fff !important;
+}
+
+.yellow {
+  background: #ef6500 !important;
+  border: 0 !important;
+}
+
+.onTrend {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 30px;
+  vertical-align: middle;
+  background: @Amount-Right-Btn  !important;
+  border-radius: 50%;
+}
+
+// 游戏记录日历
+.record {
+  .m-popover {
+    .m-popover-container {
+      .m-calendar {
+        .m-toolbar {
+          background-color: #fff;
+        }
+
+        .m-week-header {
+          background-color: #fff;
+          font-size: 28px;
+          color: @Bill-Font-Color-Pale;
+        }
+
+        .m-months-container {
+          .m-months-wrapper {
+            .m-months {
+              .m-row {
+                &::before {
+                  height: 0;
+                }
+              }
+
+              .m-day {
+                .m-today {
+                  background: @Amount-Out-Btn;
+                  color: #fff;
+                }
+
+                .m-day-num {
+                  width: 60px;
+                  height: 60px;
+                  line-height: 60px;
+                  border-radius: 50%;
+                }
+
+                .m-during {
+                  background: @Amount-In-Btn;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*----------------------------------------------------------*/
+/*投注选项个数*/
+.row-1 {
+  width: 100% !important;
+}
+
+.row-2 {
+  width: 50% !important;
+}
+
+.row-3 {
+  width: 33.33% !important;
+}
+
+.row-4 {
+  width: 25% !important;
+}
+
+.row-5 {
+  width: 20% !important;
+}
+
+.row-6 {
+  width: 16.66% !important;
+}
+
+/*------------------------------------------------------------------*/
+/*彩种模板样式*/
+.sscGf {
+  position: relative;
+  padding-bottom: 70px;
+
+  div {
+    overflow: hidden;
+
+    h3 {
+      float: left;
+      font-size: 26px;
+      color: #95949a;
+      margin-left: 20px;
+      line-height: 65px;
+    }
+
+    dl {
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      dd {
+        float: left;
+        width: 65px;
+        height: 65px;
+        border: 1px solid #dfdcda; /*no*/
+        text-align: center;
+        line-height: 65px;
+        border-radius: 10px;
+        margin-left: 23px;
+        font-size: 36px;
+        color: #999;
+      }
+
+      dd:last-child {
+        width: 102px;
+      }
+
+      dd:first-child {
+        margin-left: 73px;
+      }
+    }
+
+    ul {
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      border-bottom: 1px solid #e0dcd9;
+      /*no*/
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+
+      li {
+        width: 33.3%;
+        transition: 0.3s;
+
+        span {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          margin: 10px;
+          border-radius: 50%;
+          background-color: #c6cfd6;
+          line-height: 100px;
+          font-size: 45px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.sscCt {
+  padding-bottom: 95px;
+
+  h3 {
+    line-height: 50px;
+    background-color: #f6f6f6;
+    color: #95949a;
+    border-bottom: 1px solid #e0dcd9;
+    /*no*/
+    font-size: 26px;
+  }
+
+  div:first-child h3 {
+    border-top: 1px solid #e0dcd9;
+    /*no*/
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 33.33%;
+      box-sizing: border-box;
+      line-height: 98px;
+      transition: 0.3s;
+      border-bottom: 1px solid #e0dcd9;
+      /*no*/
+      border-right: 1px solid #e0dcd9;
+      /*no*/
+      background-color: #fff;
+
+      span:first-child {
+        color: #666;
+        font-size: 34px;
+        margin-right: 20px;
+        font-weight: bold;
+      }
+
+      span:last-child {
+        color: #999;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.betSix {
+  padding-bottom: 95px;
+
+  h3 {
+    line-height: 50px;
+    background-color: #f6f6f6;
+    color: #95949a;
+    border-top: 1px solid #e0dcd9;
+    /*no*/
+    border-bottom: 1px solid #e0dcd9;
+    /*no*/
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 20%;
+      margin-bottom: 18px;
+      transition: 0.5s;
+
+      div {
+        width: 125px;
+        height: 125px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 1px solid #e0dcd9;
+        /*no*/
+
+        p {
+          margin-top: 22px;
+          line-height: 46px;
+          font-size: 40px;
+          color: #666;
+        }
+
+        span {
+          line-height: 45px;
+          font-size: 27px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.betSix2 {
+  padding-bottom: 95px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 33.33%;
+      margin-bottom: 18px;
+      transition: 0.5s;
+
+      div {
+        width: 220px;
+        height: 125px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 1px solid #dedddb;
+        /*no*/
+        background-color: #f6f6f6;
+
+        h3 {
+          line-height: 41px;
+          font-size: 35px;
+          margin-top: 10px;
+        }
+
+        p {
+          line-height: 31px;
+          font-size: 25px;
+          color: #999999;
+        }
+
+        span {
+          line-height: 47px;
+          font-size: 27px;
+          color: #999999;
+        }
+      }
+    }
+  }
+}
+
+
+/*六合彩code颜色*/
+.red {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-color: red !important;
+
+  p {
+    color: red !important;
+  }
+}
+
+.onBtn-red {
+  background-color: red;
+
+  p,
+  span {
+    color: white !important;
+  }
+}
+
+.blue {
+  background-color: rgba(0, 0, 255, 0.1);
+  border-color: blue !important;
+
+  p {
+    color: blue !important;
+  }
+}
+
+.onBtn-blue {
+  background-color: blue;
+
+  p,
+  span {
+    color: white !important;
+  }
+}
+
+.green {
+  background-color: rgba(0, 255, 0, 0.1);
+  border-color: green !important;
+
+  p {
+    color: green !important;
+  }
+}
+
+.onBtn-green {
+  background-color: green;
+
+  p,
+  span {
+    color: white !important;
+  }
+}
+
+/*封单*/
+.fendan {
+  background: #a1a1a1 !important;
+}
+
+/*PK10号码颜色*/
+.code01 {
+  background-color: #ff2700;
+}
+
+.code02 {
+  background-color: #40d6d7;
+}
+
+.code03 {
+  background-color: #7a0901;
+}
+
+.code04 {
+  background-color: #2697ff;
+}
+
+.code05 {
+  background-color: #0d9e13;
+}
+
+.code06 {
+  background-color: #c0b700;
+}
+
+.code07 {
+  background-color: #bdbdbd;
+}
+
+.code08 {
+  background-color: #5c5c5c;
+}
+
+.code09 {
+  background-color: #5337fe;
+}
+
+.code10 {
+  background-color: #ff7701;
+}
+
+/* 封盘提醒 */
+.Seal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+  ul {
+    background-color: #fff;
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border-radius: 10px;
+
+    li {
+      h3 {
+        line-height: 180px;
+        font-size: 45px;
+        color: #666;
+      }
+
+      p {
+        line-height: 60px;
+        color: #666;
+        font-size: 35px;
+      }
+
+      .van-button {
+        width: 260px;
+        height: 90px;
+        margin-top: 90px;
+        line-height: 90px;
+        font-size: 32px;
+        border-radius: 10px;
+        &:first-child {
+          float: left;
+          margin-left: 30px;
+          background-color: #f6f6f6;
+          border: 1px solid #dedddb; /*no*/
+          color: #666;
+        }
+        &:last-child {
+          float: right;
+          margin-right: 30px;
+          background: @Amount-Right-Btn;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/*申请活动按钮*/
+//.apply {
+//  width: 200px;
+//  height: 60px;
+//  line-height: 60px;
+//  border-radius: 28px;
+//  background: #fd6c30;
+//  color: #fff;
+//  text-align: center;
+//  margin: 0 auto 6px !important;
+//  font-size: 16px;
+//  overflow: hidden;
+//  text-overflow: ellipsis;
+//  a {
+//    color: #fff;
+//  }
+//}
+
+/*长龙助手*/
+.changLong {
+  .van-tabs {
+    .van-tabs__wrap {
+      .van-tabs__line {
+        background-color: @ThemeColor;
+        width: 50% !important;
+      }
+      .van-tab {
+        font-size: 30px;
+      }
+      .van-tab--active {
+        color: @ThemeColor;
+      }
+    }
+    .van-tabs__content {
+      .van-tab__pane {
+        min-height: calc(100vh - 210px);
+      }
+    }
+  }
+  .disable {
+    b {
+      border-color: #ccc !important;
+      p {
+        color: #ccc !important;
+      }
+      span {
+        color: #ccc !important;
+      }
+    }
+  }
+}
+// 加载中...
+.load {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  .van-loading {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 28px;
+  }
+}
+
+.bg-violet {
+  background: #6b73f5;
+}
+
+.bg-blue {
+  background: #38f;
+}
+
+.bg-green {
+  background: #1abc65;
+}
+
+.bg-red {
+  background: #ec2829;
+}
+
+/* 成功弹框样式 */
+.Popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-align: center;
+  ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 588px;
+    height: 650px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+
+    li {
+      padding: 0 30px;
+    }
+
+    li:first-child {
+      font-size: 180px;
+      color: #57d80a;
+      margin-top: 40px;
+    }
+
+    li:nth-child(2) {
+      line-height: 58px;
+      font-size: 36px;
+    }
+
+    li:nth-child(3) {
+      color: #999999;
+      line-height: 48px;
+    }
+
+    li:last-child {
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 30px;
+
+      .van-button {
+        display: inline-block;
+        width: 228px;
+        height: 88px;
+        border: 1px solid #dedddb;
+        /*no*/
+        border-radius: 10px;
+        line-height: 88px;
+        text-align: center;
+        font-size: 32px;
+        &:first-child {
+          margin-right: 5px;
+          background-color: #f6f6f6;
+        }
+        &:last-child {
+          margin-left: 5px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.user {
+  .van-swipe {
+    height: 500px;
+  }
+}
+
+/* 刷新 */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+////
+.disableBtn {
+  background: silver !important;
+  transition: 0.3s;
+}
+
+/* 洗码 */
+.washCode,.aboutWashCode,.aboutWashCodeDetail {
+  .van-cell-group{
+    &::after {
+      border-width: 0;
+    }
+  }
+  .van-tabs__line {
+    background: @ThemeColor;
+  }
+  .van-tab--active {
+    color: @ThemeColor;
+  }
+  .van-tabs .van-tab__pane {
+    min-height: calc(100vh - 250px);
+  }
+}
+.aboutWashCode {
+  .van-tabs__line {
+    width: 50% !important;
+  }
+  .van-ellipsis {
+    font-size: 28px;
+  }
+}
+
+/* 活动内容 */
+.activityContent {
+  p {
+    font-size: 28px !important;
+    margin: 10px 0 !important;
+    span {
+      font-size: 28px !important;
+      line-height: 50px !important;
+      span {
+        font-size: 28px !important;
+        line-height: 50px !important;
+      }
+    }
+  }
+  font {
+    font-size: 28px !important;
+    line-height: 50px !important;
+  }
+  table {
+    width: 100% !important;
+    font-size: 28px !important;
+    margin: 20px 0 !important;
+    tr {
+      width: 100% !important;
+    }
+    td {
+      width: auto !important;
+    }
+  }
+}
+//代理
+.teamRule {
+  .content {
+    .img {
+      width: 100%;
+      height: 260px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text {
+      padding: 25px;
+      h1,h3 {
+        color: #fea24d;
+        text-indent: 30px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+      p {
+        line-height: 34px;
+        font-size: 23px;
+        text-indent: 30px;
+        color: #666;
+      }
+    }
+  }
+}
+.teamBetRecordList {
+  .van-pull-refresh {
+    min-height: calc(100vh - 180px);
+  }
+}
+.underReport {
+  .van-pull-refresh {
+    min-height: calc(100vh - 260px);
+  }
+}
+.teamContactsList {
+  .van-pull-refresh {
+    min-height: calc(100vh - 180px);
+  }
+}
+
+// 人工
+.chat {
+  .chatContent {
+    .imgP {
+      .loading {
+        .loading-container {
+          min-width: 100px;
+          min-height: 100px;
+          background-color: initial;
+        }
+      }
+    }
+  }
+  .footer {
+    .emoji {
+      width: 100%;
+      #EmojiPicker {
+        width: 100%;
+        #Categories {
+          height: 50px;
+          .category {
+            flex: 0 0 auto;
+            width: 10%;
+            padding: 0;
+            &.active {
+              border-bottom-color: @ThemeColor !important;
+            }
+          }
+        }
+        #InputSearch {
+          display: none;
+        }
+        #Emojis {
+          .container-emoji {
+            height: 250px;
+            .grid-emojis {
+              grid-template-columns: repeat(6, 16.667%) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

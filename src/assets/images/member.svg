@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>会员@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="#F4CE7A" fill-rule="evenodd">
+        <g id="团队成员2" transform="translate(-138.000000, -476.000000)">
+            <g id="会员" transform="translate(138.000000, 476.000000)">
+                <circle id="Oval" fill="#F4CE7A" cx="12.5" cy="12.5" r="12.5"></circle>
+                <path d="M12.5,12 C10.5705794,12 9,10.4308082 9,8.50071458 C9,6.56919176 10.5691569,5 12.5,5 C14.4308431,5 16,6.56919176 16,8.49927243 C16,10.4293531 14.4308431,12 12.5,12 Z M13.6964467,19 L11.3035533,19 C8.89936512,19 7,19 7,17.5563247 L7,17.3166766 C7,14.9359001 8.93038117,13 11.3035406,13 L13.6964467,13 C16.0696061,13 18,14.9373337 18,17.3166766 L18,17.5563247 C18,19 16.004744,19 13.6964594,19 L13.6964467,19 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
